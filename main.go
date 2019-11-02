@@ -7,11 +7,7 @@ import (
 )
 
 func main() {
-	port := os.Getenv("APP_PORT")
-	if port == "" {
-		fmt.Println("No port set. Using default of :8888")
-		port = "8888"
-	}
+	port := "80"
 	enviro := os.Getenv("APP_ENV")
 
 	switch enviro {
