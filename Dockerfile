@@ -1,8 +1,7 @@
 FROM golang:1.11 as builder
-RUN git clone https://github.com/joeydouglas/go-container-example.git && \
-    cd /go/go-container-example
+RUN git clone https://github.com/joeydouglas/go-container-example.git
 WORKDIR /go/go-container-example
-# COPY . /go/src/github.com/joeydouglas/lenslocked.com/
+
 RUN go get -d -v
 RUN CGO_ENABLED=0 GOOS=linux go build -o go-container-example
 
